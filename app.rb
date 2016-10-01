@@ -6,7 +6,7 @@ get '/' do
 end
 
 get '/tweet' do
-  TwitterClient.new.update('Hello, heroku.')
+  TwitterClient.new.update('GitHub!')
 end
 
 get '/wakeup' do
