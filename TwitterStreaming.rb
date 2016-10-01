@@ -3,6 +3,8 @@ require 'twitter'
 
 class TwitterStreaming
 
+    OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+
     def initialize
         @client_streaming = Twitter::Streaming::Client.new do |config|
             config.consumer_key = ENV['CONSUMER_KEY']
@@ -12,14 +14,17 @@ class TwitterStreaming
         end
     end
 
-    def test
-        client_streaming.user do |object|
+    def stream
+        @client_streaming.user do |object|
             case object
             when Twitter::Tweet
-                object.text
+                puts object.text
+            end
         end
     end
 
-
 end
 
+if __FILE__ == $0
+  TwitterStreaming.new.stream
+end
