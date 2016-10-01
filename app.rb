@@ -9,6 +9,10 @@ get '/tweet' do
   TwitterClient.new.update('GitHub!')
 end
 
+get '/streaming' do
+  TwitterStreaming.new.test
+end
+
 get '/wakeup' do
   TwitterClient.new.update('Goodmorning, heroku.')
 end
