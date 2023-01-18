@@ -23,7 +23,7 @@ GEM
     multipart-post (2.0.0)
     naught (1.1.0)
     public_suffix (3.1.1)
-    rack (2.1.4.1)
+    rack (2.1.4.2)
     rack-protection (1.5.5)
       rack
     simple_oauth (0.3.1)
@@ -56,7 +56,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  sinatra (= 1.4.7)
+  sinatra (>= 2.2.0)
   twitter (= 5.16.0)
 
 RUBY VERSION
