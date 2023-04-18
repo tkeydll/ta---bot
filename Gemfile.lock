@@ -23,7 +23,7 @@ GEM
     multipart-post (2.0.0)
     naught (1.1.0)
     public_suffix (3.1.1)
-    rack (2.1.4.3)
+    rack (2.2.6.4)
     rack-protection (1.5.5)
       rack
     simple_oauth (0.3.1)
